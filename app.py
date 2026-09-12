@@ -10,7 +10,7 @@ st.html("""
 <style>
   /* 全局基准字号 */
   html, body, .stApp, .stApp * {
-    font-size: 18px !important;
+    font-size: 20px !important;
   }
   /* 标题层级放大 */
   h1 { font-size: 2rem !important; }
@@ -31,11 +31,7 @@ st.title("🏦 银行账单月度日均余额 (DAB) 测算工具")
 st.write("上传银行导出的 Excel 交易流水，自动推算全月每日余额并支持在线模拟测算。")
 
 # 1. 文件上传区
-uploaded_file = st.file_uploader(
-    "请选择银行导出的 Excel 账单文件 (.xls / .xlsx)",
-    type=["xls", "xlsx"],
-    help="💡 安卓平板若上传按钮灰色无法点击，请尝试：① 切换到 Chrome 浏览器 ② 或使用 Firefox ③ 或开启"桌面模式"后重试"
-)
+uploaded_file = st.file_uploader("请选择银行导出的 Excel 账单文件 (.xls / .xlsx)", type=["xls", "xlsx"])
 
 if uploaded_file is not None:
  try:
