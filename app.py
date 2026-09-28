@@ -39,7 +39,7 @@ if uploaded_file is not None:
   df_raw = pd.read_excel(uploaded_file, sheet_name=0)
 
   # 定位交易数据区（UOB 导出格式通常从第 8 行起）
-  tx_df = df_raw.iloc[7:].copy()
+  tx_df = df_raw.iloc[5:].copy()
   tx_df.columns = ['Date_Raw', 'Description', 'Withdrawal', 'Deposit', 'Balance']
 
   # 清洗数字和日期类型
